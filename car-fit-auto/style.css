@@ -1,0 +1,240 @@
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  display: flex;
+  justify-content: space-between; /* Space between logo and contact */
+  align-items: center;
+  padding: 10px 20px;
+  background-image: url('background\ image.jpg'); /* Add your image path here */
+  background-size: cover; /* Ensures the background covers the header */
+  background-position: center; /* Centers the background image */
+  color: white;
+  height: 150px; /* You can adjust this depending on how large you want the header */
+}
+
+.logo-container {
+  margin-left: 0;
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+}
+.business-name {
+  flex: 1; /* Ensures that the business name takes up the remaining space */
+  text-align: center; /* Centers the business name */
+}
+.contact-info {
+  text-align: right;
+}
+
+.contact-info p {
+  margin: 0;
+}
+
+.contact-info a {
+  color: #f8d700;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #333;
+  padding: 10px 0;
+}
+
+nav a {
+  color: white;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+nav a:hover {
+  background-color: #f8d700;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f1f1f1;
+}
+
+.hero h2 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+/* Products Section */
+#products {
+  padding: 40px 20px;
+  background-color: #fff;
+}
+
+#products h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* This allows responsive grid */
+  gap: 20px;
+  justify-items: center;
+}
+
+.product-card {
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  max-width: 300px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+}
+
+.contact-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.call-btn, .whatsapp-btn {
+  padding: 10px 20px;
+  background-color: #f8d700;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.call-btn:hover, .whatsapp-btn:hover {
+  background-color: #e0c400;
+}
+
+/* About and Contact Section */
+section {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+}
+
+section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+section p {
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Media Queries for Mobile Responsiveness */
+
+/* For mobile devices (up to 600px) */
+@media screen and (max-width: 600px) {
+  .product-card {
+    width: 100%;
+    padding: 10px;
+  }
+
+  header {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .logo-container {
+    margin-bottom: 10px;
+  }
+
+  .contact-info {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .contact-info p {
+    margin: 5px 0;
+  }
+
+  nav {
+    flex-direction: column;
+  }
+
+  nav a {
+    padding: 10px;
+  }
+
+  .products {
+    grid-template-columns: 1fr; /* One column for small screens */
+  }
+
+  .product-card {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .contact-buttons a {
+    padding: 8px 15px;
+  }
+}
+
+/* For larger tablets (601px - 900px) */
+@media screen and (max-width: 900px) {
+  .products {
+    grid-template-columns: repeat(2, 1fr); /* Two columns for mid-size screens */
+  }
+}
+
+/* For laptops and larger screens (900px and above) */
+@media screen and (min-width: 900px) {
+  .products {
+    grid-template-columns: repeat(3, 1fr); /* Three columns for larger screens */
+  }
+
+  #about, #contact {
+    background: linear-gradient(to bottom, white, #ccc, #666, black);
+    color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+  }
+}
