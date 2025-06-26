@@ -59,4 +59,6 @@ TO HOST THIS PROJECT
 
   <button type="submit">Send</button>
 </form>
-it's deployed in vercel and working. am selling it with it's domain if interested 
+it's deployed in vercel and working. am selling it with it's domain if interested
+
+This file is up and running 
